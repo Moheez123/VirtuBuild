@@ -1,0 +1,132 @@
+.InformationalBlog {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: "Inter";
+  margin-top: 40px;
+  margin-bottom: 40px;
+  overflow-x: hidden;
+}
+.card-body{
+  display: block;
+}
+.Info-Blog-heading {
+  color: #111;
+  text-align: center;
+}
+p {
+  color: #777;
+}
+.card-text {
+  color: darkslategrey;
+}
+.main-countainer {
+  display: flex;
+  justify-content: column;
+}
+
+
+
+.card-mini{
+    content: "";
+    top: 0;
+    left: 0;
+    padding-top: 14.5rem;
+    border-radius: 16px;
+    background: linear-gradient(85deg, #ffffff, #ffffff);
+    color: #fff;
+    z-index: 2;
+   border:  2px solid #777;
+}
+
+body::-webkit-scrollbar-thumb{
+  background:#434343;
+
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%),
+    inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
+.mini-card-grid {
+  padding: 1rem 1rem 2rem;
+  margin: 0 1rem 0;
+  display: flex;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  /* margin-right: 25%; */
+  align-items: stretch; /* Ensure equal height */
+
+}
+
+.mini-card {
+  border: 2px solid #777;
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 16px;
+
+  background: linear-gradient(85deg, #ffffff, #ffffff);
+
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out; /* Transition the entire card */
+}
+
+.mini-card:not(:first-child) {
+  margin-left: -100px;
+  box-shadow: 2rem 0 3rem -2rem #000;
+}
+.mini-card:hover {
+  transform: rotate(5deg); /* Apply tilt effect on hover */
+}
+
+.hovered {
+  z-index: 2;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 8px;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s ease-in-out;
+}
+
+.mini-card:hover .card-overlay {
+  opacity: 0; /* Hide the overlay on hover */
+  transform: rotate(-5deg);
+}
+
+.Blog-Box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .main-countainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mini-card-grid {
+    padding-top: 2rem;
+    padding-right: 5%;
+    margin-right: 10%;
+  }
+  .mini-card:not(:first-child) {
+    /* margin-left: -45%; */
+    box-shadow: -2rem 0 3rem -2rem #000;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .mini-card:not(:first-child) {
+    margin-left: -5%;
+  }
+}

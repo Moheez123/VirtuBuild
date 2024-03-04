@@ -1,0 +1,108 @@
+.GiT-div {
+  background-image: url(/public/Images/GetInTouch/GetIn.webp);
+  background-size: cover;
+}
+
+.contact-box {
+  width: 90%; /* Adjust width for smaller screens */
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: "Inter";
+  background-color: rgba(250, 250, 250, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.contact-heading {
+  font-size: 2em; /* Adjust font size for smaller screens */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.contact-text {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1em; /* Adjust font size for smaller screens */
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column; /* Stack fields vertically on smaller screens */
+  margin-bottom: 15px;
+}
+
+.form-field {
+  width: 100%; /* Full width for all fields on smaller screens */
+}
+
+.form-field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-field input:hover,
+.form-field textarea:hover {
+  border-color: #000;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field button {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px;
+  margin: 0 auto; /* Center button */
+}
+
+.form-note {
+  font-size: 0.8em; /* Adjust font size for smaller screens */
+  color: #777;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Media query for tablet screens */
+@media screen and (min-width: 768px) {
+  .contact-box {
+    width: 70%; /* Adjust width for tablet screens */
+  }
+}
+
+/* Media query for laptop and larger screens */
+@media screen and (min-width: 1024px) {
+  .contact-box {
+    width: 50%; /* Adjust width for laptop and larger screens */
+  }
+}

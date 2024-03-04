@@ -1,0 +1,63 @@
+.containerSlider4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-weight: 600;
+  height: 85vh; /* Set the height to 40% of the viewport height */
+}
+
+.front3 {
+  width: 100%;
+  height: 100%; /* Set the height of the parent container to match the image height */
+  position: relative;
+}
+
+.front3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 90px;
+  font-weight: 900;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .containerSlider4 {
+    height: auto; /* Reset height for smaller screens */
+  }
+
+  .front3 {
+    width: 100%;
+    height: 100%; /* Set height to 100% to fill the container */
+  }
+
+  .front3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .text-overlay {
+    font-size: 6vw; /* Adjust font size for tablets */
+  }
+}
+@media (min-width: 768px) {
+  .text-overlay {
+    font-size: 7vw; /* Adjust font size for tablets */
+  }
+}

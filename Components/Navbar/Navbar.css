@@ -1,0 +1,107 @@
+.navbar {
+  background-color: rgb(250, 250, 250, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.nav {
+  font-size: 14px;
+  color: #777;
+  font-family: "Inter";
+  font-weight: 600;
+  gap: 40px;
+}
+.nav2 {
+  position: relative;
+  display: inline-block;
+}
+.nav2::before,
+.nav2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(44, 163, 204);
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+.nav2::before {
+  top: -3px;
+  transform-origin: left;
+}
+.nav2::after {
+  bottom: -3px;
+  transform-origin: right;
+}
+.nav2:hover::before,
+.nav2:hover::after,
+.active::before,
+.active::after {
+  transform: scaleX(1);
+}
+
+.animated-navbar {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.animated-navbar.navbar-collapse.show {
+  opacity: 1;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ea5a1b;
+}
+
+/* .inquiry-btn {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+    border: 2px solid transparent; 
+    font-size: 14px;
+    color: #777;
+  } */
+
+/* .inquiry-btn:hover {
+    background-color: #EA5A1B;
+    color: white; 
+    border-color: white; 
+  } */
+
+.logo:hover {
+  box-shadow: 0 0 10px #ea5a1b;
+}
+/* .logo-container{
+   position: relative;
+    
+  }
+  .slide{
+    position: absolute;
+    top: 0;
+    left: 140px;
+    color: #777;
+    padding: 0px;
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+ 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  } */
+/* .slide:hover{
+    box-shadow: 0 0 10px #EA5A1B;
+  }
+  .logo-container:hover .slide{
+    transform: translateX(0);
+  } */
+/* .logo-container:hover .slide{
+    box-shadow: 0 010px #EA5A1B;
+  } */
